@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Search</title>
+
+	<style>
+		body {
+			color: #333333;
+			font-size: 21px;
+			background-color: #fafafa;
+		}
+		p {
+			letter-spacing: 1px;
+		}
+		span {
+			
+			color: #9900e6;
+		}
+		.spn{
+			background-color: #efefef;
+			color: #ff6666;
+		}
+		a {
+			text-decoration: none;
+			color : #ff3333;
+			background-color: #f3f3f3;
+		}
+		a:hover{text-decoration: underline;}
+		h2 {
+			text-align: center;
+			line-height: 20px;
+		}	
+	</style>
+</head>
+<body>
+	<h2>Image Search Abstraction Layer</h2>
+	<p>Usage   :  " <span class="spn"> http://localhost:8080/<span>query</span>&<span>count</span>&<span>offset</span></span> "</p>
+	<ul>
+		<li><span>query</span>  :  the thing you want to search </li>
+		<li><span>count </span> :  number of results </li>
+		<li><span>offset</span> :  skip number of result from the start </li>
+	</ul>
+	<p>Search : " <a href="http://localhost:8080/cats&5&0">http://localhost:8080/cats&5&0</a> "</p>
+	<p>Return  : '<code>{"name" : "...", 
+	"content" : "...",
+	"thumbnail" : "...",
+	"source" : "...",
+	"published" : "..."}</code>'</p>
+	<hr />
+	<p>Usage   :  " <span class="spn"> http://localhost:8080/<span>history</span>/<span>limit</span></span> "</p>
+	<ul>
+		<li><span>history</span> : view search history</li>
+		<li><span>limit</span>   : number of search history to display</li>
+	</ul>
+	<p>Searched : " <a href="http://localhost:8080/history/7">http://localhost:8080/history/7</a> "</p>
+	
+	<p>Return  : '<code>{"query" : "...", 
+	"time" : "..."}</code>'</p>
+</body>
+</html>
